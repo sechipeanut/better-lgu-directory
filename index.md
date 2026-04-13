@@ -18,7 +18,7 @@ A community-maintained directory of **Better LGU** digital transparency portals 
     <input type="text" id="lgu-search" onkeyup="filterDirectory()" placeholder="Search LGUs by name, status, or maintainer..." class="block w-full pl-10 pr-3 py-3 border border-gray-200 rounded-xl leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 sm:text-sm transition-all shadow-sm">
 </div>
 
-<div id="lgu-table-container" markdown="1">
+<div id="lgu-table-container" class="table-wrapper" markdown="1">
 
 | LGU                             | Domain                                                | Repository                                                                     | Facebook                                                           | Status    | Maintainer/s                                                                           |
 |---------------------------------|-------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------|-----------|----------------------------------------------------------------------------------------|
@@ -43,6 +43,8 @@ A community-maintained directory of **Better LGU** digital transparency portals 
 
 ## 🚦 Status Legend
 
+<div class="table-wrapper" markdown="1">
+
 | Badge               | Meaning                                         |
 |---------------------|-------------------------------------------------|
 | 🟢 Active           | Actively maintained with regular updates        |
@@ -50,15 +52,21 @@ A community-maintained directory of **Better LGU** digital transparency portals 
 | 🔴 Unmaintained     | No longer being actively maintained             |
 | 🔵 Planned          | Registered intent — development not yet started |
 
+</div>
+
 ## 🧩 Community Templates
 
 These templates are provided by the community to help you get started quickly.
+
+<div class="table-wrapper" markdown="1">
 
 | Template                 | Stack              | Repository                                             | Description                                                 |
 |--------------------------|--------------------|--------------------------------------------------------|-------------------------------------------------------------|
 | Better Solano Starter    | React + TypeScript | [GitHub](https://github.com/BetterSolano/bettersolano) | Starter template based on the BetterSolano implementation   |
 | Better Los Baños Starter | React + TypeScript | [GitHub](https://github.com/BetterLosBanos/betterlb)   | Starter template based on the BetterLosBaños implementation |
 | Better Local Gov         | React + TypeScript | [GitHub](https://github.com/iyanski/betterlocalgov)    | Local Government Website Starter Kit                        |
+
+</div>
 
 > Have a template to contribute? Open a PR and add it to this table and to [TEMPLATES.md](TEMPLATES.md).
 

@@ -158,21 +158,33 @@ body {
   margin: 3rem 0;
 }
 
-main table {
-  min-width: 100%;
-  border-collapse: collapse;
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  margin: 3rem 0;
   border: 1px solid var(--color-gray-200);
   border-top: 4px solid var(--color-primary-600);
-  border-radius: 0.5rem;
-  overflow: hidden;
   background: white;
-  margin: 3rem 0;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+main table {
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: none;
+  margin: 0;
+  box-shadow: none;
 }
 
 main thead {
-  background-color: var(--color-gray-100);
-  border-bottom: 1px solid var(--color-gray-200);
+  z-index: 10;
+}
+
+main thead::after {
+  content: '';
+  display: block;
 }
 
 main th {
@@ -183,6 +195,10 @@ main th {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-gray-900);
+  border-bottom: 2px solid var(--color-gray-200);
+  position: sticky;
+  top: -1px;
+  background-color: var(--color-gray-100);
 }
 
 main td {
@@ -190,7 +206,9 @@ main td {
   font-size: 0.875rem;
   color: var(--color-gray-800);
   border-bottom: 1px solid var(--color-gray-200);
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 300px;
 }
 
 main tr:hover {
